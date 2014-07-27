@@ -6,6 +6,9 @@ dependencies:
   override:
     - docker build -t circleci/hello:$CIRCLE_SHA1 .
 
+database:
+  override: []
+
 test:
   override:
     - docker run -d -p 3000:3000 -e "SECRET_KEY_BASE=abcd1234" circleci/hello:$CIRCLE_SHA1; sleep 10
