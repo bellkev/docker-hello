@@ -3,7 +3,7 @@ machine:
     - docker
 
 dependencies:
-  post:
+  pre:
     - docker build -t circleci/hello:$CIRCLE_SHA1 .
 
 test:
