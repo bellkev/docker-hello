@@ -7,7 +7,7 @@ dependencies:
     - docker build -t circleci/hello:$CIRCLE_SHA1 .
 
 database:
-  override: []
+  override:
 
 test:
   override:
